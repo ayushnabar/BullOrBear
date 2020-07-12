@@ -1,0 +1,14 @@
+{% extends "html/layout.html" %}
+{% block body %}
+<body>
+{% for time in times %}
+    <h1>{{ time }}</h1>
+{% endfor %}
+<h2>{{ day }}</h2>
+
+{% if extendedHours %}
+    <h2> It is extended hours </h2>
+{% else %}
+    <h2> It is market hours </h2>
+{% endif %}
+{% endblock %}
